@@ -16,7 +16,7 @@ const projects = [
         description: "Digital infrastructure for independent systems. A foundation layer designed to evolve.",
         status: "ACTIVE",
         statusClass: "active",
-        url: "#"
+        url: "https://elyriax.com"
     },
     {
         number: "02",
@@ -38,12 +38,12 @@ const projects = [
     },
     {
         number: "04",
-        name: "VoxTube",
+        name: "YoxTube",
         category: "Media / Automation",
         description: "Automated media tooling. Early-stage exploration in content and audio processing.",
         status: "CONCEPT",
         statusClass: "concept",
-        url: "#"
+        url: "https://yoxtube.xyz"
     }
 ];
 
