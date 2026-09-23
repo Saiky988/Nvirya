@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Primary Meta -->
+    <title>Nvirya — Technology, built with intent.</title>
+    <meta name="description" content="Nvirya is an independent technology brand building digital products, tools and experiments. Small systems. Useful ideas. Long-term direction." />
+    <meta name="author" content="Nvirya" />
+    <meta name="theme-color" content="#080808" />
+    <link rel="canonical" href="https://nvirya.com" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nvirya.com" />
+    <meta property="og:title" content="Nvirya — Technology, built with intent." />
+    <meta property="og:description" content="An independent technology brand building digital products, tools and experiments." />
+    <meta property="og:image" content="/assets/og-image.png" />
+    <meta property="og:site_name" content="Nvirya" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@nvirya" />
+    <meta name="twitter:title" content="Nvirya — Technology, built with intent." />
+    <meta name="twitter:description" content="An independent technology brand building digital products, tools and experiments." />
+    <meta name="twitter:image" content="/assets/og-image.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/icon.png" />
+    <link rel="apple-touch-icon" href="/assets/icon.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- =============================================
+         HERO GRID (Fixed background texture)
+         ============================================= -->
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <!-- =============================================
+         NAVIGATION
+         ============================================= -->
+    <nav id="nav" role="navigation" aria-label="Primary navigation">
+        <div class="nav-inner">
+            <!-- Logo -->
+            <a href="#home" class="nav-logo" aria-label="Nvirya — Home">NVIRYA</a>
+
+            <!-- Desktop Links -->
+            <ul class="nav-links" role="list">
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#direction">Direction</a></li>
+            </ul>
+
+            <!-- Desktop CTA -->
+            <a href="#projects" class="nav-cta" aria-label="Explore Nvirya projects">
+                Explore <span class="arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <!-- Mobile Hamburger -->
+            <button
+                id="nav-hamburger"
+                class="nav-hamburger"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="nav-mobile-overlay"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Overlay -->
+    <div id="nav-mobile-overlay" class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Navigation menu">
+        <ul class="nav-mobile-links" role="list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#direction">Direction</a></li>
+        </ul>
+        <div class="nav-mobile-footer">
+            <span class="mono">NVR://SYSTEM</span>
+            <span class="mono">nvirya.com</span>
+        </div>
+    </div>
+
+    <!-- =============================================
+         HERO SECTION
+         ============================================= -->
+    <section id="home" aria-label="Hero">
+        <div class="hero-content">
+            <!-- Meta row -->
+            <div class="hero-meta-row">
+                <span class="hero-status-dot" aria-hidden="true"></span>
+                <span class="mono">NVR / 001</span>
+                <span class="mono">STATUS: ACTIVE</span>
+                <span class="mono">EST. 2026</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="hero-title">
+                <span class="line"><span class="line-inner">Technology,</span></span>
+                <span class="line"><span class="line-inner">built with</span></span>
+                <span class="line"><span class="line-inner">intent.</span></span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="hero-subtitle">
+                An independent digital ecosystem for ideas,
+                experiments and products that are worth building.
+            </p>
+
+            <!-- Actions -->
+            <div class="hero-actions">
+                <a href="#projects" class="btn-primary">
+                    Explore projects <span aria-hidden="true">↗</span>
+                </a>
+                <a href="#about" class="btn-secondary">What is Nvirya?</a>
+            </div>
+        </div>
+
+        <!-- Bottom metadata bar -->
+        <div class="hero-bottom" aria-label="System metadata">
+            <div class="hero-bottom-item">
+                <span class="label">System</span>
+                <span class="value">NVR://DIGITAL</span>
+            </div>
+            <div class="hero-bottom-item">
+                <span class="label">Build</span>
+                <span class="value">001-ALPHA</span>
+            </div>
+            <div class="hero-bottom-item">
+                <span class="label">Domain</span>
+                <span class="value">nvirya.com</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+         BRAND STATEMENT
+         ============================================= -->
+    <div id="statement" aria-labelledby="statement-heading">
+        <div class="statement-inner">
+            <p id="statement-heading" class="statement-text reveal">
+                Not everything<br />
+                needs to be built<br />
+                <em>loudly.</em>
+            </p>
+
+            <div class="statement-aside reveal reveal-delay-2">
+                <p>
+                    Nvirya exists to build useful things with intent. No noise, no shortcuts,
+                    no unnecessary complexity.
+                </p>
+                <p>
+                    Each project starts with a simple question:
+                    <strong style="color: var(--text-secondary);">does this actually need to exist?</strong>
+                    If the answer is yes, we build it properly.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- =============================================
+         PROJECTS / ECOSYSTEM
+         ============================================= -->
+    <section id="projects" class="section" aria-labelledby="projects-heading">
+        <div class="section-inner">
+            <div class="section-label reveal">
+                <span>Inside Nvirya</span>
+            </div>
+
+            <div class="projects-header reveal">
+                <h2 id="projects-heading" class="projects-title">Selected projects.</h2>
+                <span class="projects-count" id="project-count" aria-live="polite">— Projects</span>
+            </div>
+
+            <!-- Project list — populated by script.js -->
+            <div id="project-list" class="project-list" role="list" aria-label="Nvirya projects">
+                <!-- Rendered by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+         PHILOSOPHY
+         ============================================= -->
+    <div id="philosophy">
+        <div class="philosophy-wrapper">
+            <div class="philosophy-inner">
+                <div class="section-label reveal">
+                    <span>How we build</span>
+                </div>
+
+                <div class="philosophy-header">
+                    <h2 class="philosophy-title reveal">
+                        Built<br />differently.
+                    </h2>
+                    <p class="philosophy-lead reveal reveal-delay-2">
+                        These aren't values on a poster.
+                        They're constraints we operate inside.
+                        The fewer we break, the better the outcome.
+                    </p>
+                </div>
+
+                <div class="principles-grid" role="list">
+                    <div class="principle-item reveal" role="listitem">
+                        <div class="principle-number">01 — FUNCTION FIRST</div>
+                        <div class="principle-title">Things should work.</div>
+                        <p class="principle-text">
+                            Before it becomes sophisticated, it must be functional.
+                            Complexity is earned, not assumed.
+                        </p>
+                    </div>
+
+                    <div class="principle-item reveal reveal-delay-1" role="listitem">
+                        <div class="principle-number">02 — LESS, BUT BETTER</div>
+                        <div class="principle-title">Remove what doesn't matter.</div>
+                        <p class="principle-text">
+                            Every feature, line, and decision carries weight.
+                            The best version of a thing has nothing left to cut.
+                        </p>
+                    </div>
+
+                    <div class="principle-item reveal reveal-delay-2" role="listitem">
+                        <div class="principle-number">03 — OWN THE STACK</div>
+                        <div class="principle-title">Build systems that can evolve.</div>
+                        <p class="principle-text">
+                            Dependency is a liability. When you control the foundation,
+                            you control the direction.
+                        </p>
+                    </div>
+
+                    <div class="principle-item reveal reveal-delay-3" role="listitem">
+                        <div class="principle-number">04 — SHIP</div>
+                        <div class="principle-title">Ideas are only useful when they exist.</div>
+                        <p class="principle-text">
+                            A perfect plan that never ships is worth nothing.
+                            Done and in the world beats ideal and in the notebook.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =============================================
+         ABOUT
+         ============================================= -->
+    <section id="about" class="section" aria-labelledby="about-heading">
+        <div class="section-label reveal">
+            <span>About Nvirya</span>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-left">
+                <h2 id="about-heading" class="about-title reveal">
+                    An independent<br />technology brand.
+                </h2>
+
+                <div class="about-meta reveal reveal-delay-2">
+                    <div class="about-meta-row">
+                        <span class="label">Type</span>
+                        <span class="value">Independent</span>
+                    </div>
+                    <div class="about-meta-row">
+                        <span class="label">Focus</span>
+                        <span class="value">Digital products & tools</span>
+                    </div>
+                    <div class="about-meta-row">
+                        <span class="label">Status</span>
+                        <span class="value" style="color: #4ade80;">Active</span>
+                    </div>
+                    <div class="about-meta-row">
+                        <span class="label">Domain</span>
+                        <span class="value">nvirya.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-right">
+                <p class="reveal">
+                    Nvirya is an independent technology brand focused on building
+                    <strong>digital products, tools and experiments</strong> — things that
+                    are precise, considered, and built for the long term.
+                </p>
+
+                <p class="reveal reveal-delay-1">
+                    We don't optimize for speed of output or surface area of features.
+                    We optimize for things that work quietly and stay working.
+                    Small systems. Useful ideas. Long-term direction.
+                </p>
+
+                <p class="reveal reveal-delay-2">
+                    The ecosystem is early. That's intentional — growth without foundation
+                    tends to collapse. Nvirya builds the foundation first.
+                </p>
+
+                <div class="about-tags reveal reveal-delay-3">
+                    <span class="about-tag">Infrastructure</span>
+                    <span class="about-tag">Developer tooling</span>
+                    <span class="about-tag">Digital products</span>
+                    <span class="about-tag">Experiments</span>
+                    <span class="about-tag">Media</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+         DIRECTION / FUTURE
+         ============================================= -->
+    <section id="direction" class="section" aria-labelledby="direction-heading">
+        <div class="direction-inner">
+            <div class="section-label reveal">
+                <span>What comes next</span>
+            </div>
+
+            <div class="direction-header reveal">
+                <h2 id="direction-heading" class="direction-title">
+                    The shape<br />
+                    <span>can change.</span><br />
+                    The standard<br />
+                    <span>shouldn't.</span>
+                </h2>
+            </div>
+
+            <div class="direction-body">
+                <div class="direction-words" role="list" aria-label="Nvirya future directions">
+                    <div class="direction-word reveal" role="listitem">
+                        Tools <span class="word-num">01</span>
+                    </div>
+                    <div class="direction-word reveal reveal-delay-1" role="listitem">
+                        Systems <span class="word-num">02</span>
+                    </div>
+                    <div class="direction-word reveal reveal-delay-2" role="listitem">
+                        Experiments <span class="word-num">03</span>
+                    </div>
+                    <div class="direction-word reveal reveal-delay-3" role="listitem">
+                        Products <span class="word-num">04</span>
+                    </div>
+                </div>
+
+                <div class="direction-note reveal reveal-delay-2">
+                    <p>
+                        Nvirya is built around one principle:
+                        if something is worth building, it's worth building well.
+                    </p>
+                    <p>
+                        Projects will ship when they're ready —
+                        not when a timeline demands it.
+                        The ecosystem grows with intent, not pressure.
+                    </p>
+                    <span class="mono" aria-hidden="true">NVR://BUILDING — ONGOING</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+         FOOTER
+         ============================================= -->
+    <footer id="footer" aria-label="Site footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <span class="footer-logo" aria-label="Nvirya">NVIRYA</span>
+                    <p>Independent technology ecosystem.<br />Building with intent.</p>
+                </div>
+
+                <!-- Navigation -->
+                <div>
+                    <p class="footer-col-title">Explore</p>
+                    <ul class="footer-nav-list" role="list">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#direction">Direction</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact / External -->
+                <div>
+                    <p class="footer-col-title">Connect</p>
+                    <ul class="footer-nav-list" role="list">
+                        <li><a href="https://github.com/nvirya" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+                        <li><a href="mailto:hello@nvirya.com">hello@nvirya.com</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="footer-bottom">
+                <span class="footer-copy">&copy; <span id="current-year">2026</span> Nvirya. All rights reserved.</span>
+                <span class="mono" aria-hidden="true">NVR://SYSTEM — BUILD 001</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
+
