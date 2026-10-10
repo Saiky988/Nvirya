@@ -1,0 +1,10 @@
+{
+  "name": "Nvirya AI",
+  "short_name": "Nvirya",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0d0f",
+  "theme_color": "#0b0d0f",
+  "description": "Nvirya AI agent workspace",
+  "icons": []
+}
