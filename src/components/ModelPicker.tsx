@@ -145,8 +145,14 @@ export function ModelPicker({ selectedModel, onSelectModel, models }: ModelPicke
       </button>
 
       {isOpen && (
-        <div ref={menuRef} className="model-picker-dropdown animate-fade-in" role="listbox">
-          <div className="model-picker-header">
+        <>
+          <div
+            className="model-picker-scrim"
+            onClick={() => setIsOpen(false)}
+            aria-hidden="true"
+          />
+          <div ref={menuRef} className="model-picker-dropdown animate-fade-in" role="listbox">
+            <div className="model-picker-header">
             <span className="picker-title">Select Model</span>
             {availableModels.length > 4 && (
               <div className="model-search-box">
@@ -203,7 +209,9 @@ export function ModelPicker({ selectedModel, onSelectModel, models }: ModelPicke
             )}
           </div>
         </div>
-      )}
+      </>
+    )}
     </div>
   )
 }
+

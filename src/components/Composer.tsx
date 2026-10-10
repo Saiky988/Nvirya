@@ -1,5 +1,5 @@
 import { FormEvent, KeyboardEvent, useEffect, useRef } from 'react'
-import { ArrowUp, Sparkles, Square, TerminalSquare } from 'lucide-react'
+import { ArrowUp, Square } from 'lucide-react'
 import { ModelPicker } from './ModelPicker'
 import type { ModelCard } from '../types'
 
@@ -12,8 +12,6 @@ interface ComposerProps {
   selectedModel: string
   setSelectedModel: (value: string) => void
   models: ModelCard[]
-  composerMode: 'chat' | 'task'
-  setComposerMode: (mode: 'chat' | 'task') => void
 }
 
 export function Composer({
@@ -25,8 +23,6 @@ export function Composer({
   selectedModel,
   setSelectedModel,
   models,
-  composerMode,
-  setComposerMode,
 }: ComposerProps) {
   const textareaRef = useRef<HTMLTextAreaElement>(null)
 
@@ -45,31 +41,9 @@ export function Composer({
     }
   }
 
-  const isTask = composerMode === 'task'
-
   return (
     <form className="composer-wrapper" onSubmit={onSubmit}>
       <div className="composer-top-bar">
-        {/* Mode Segmented Switch */}
-        <div className="mode-segmented-control">
-          <button
-            type="button"
-            className={`mode-btn ${!isTask ? 'active' : ''}`}
-            onClick={() => setComposerMode('chat')}
-          >
-            <Sparkles size={13} />
-            <span>Chat</span>
-          </button>
-          <button
-            type="button"
-            className={`mode-btn ${isTask ? 'active' : ''}`}
-            onClick={() => setComposerMode('task')}
-          >
-            <TerminalSquare size={13} />
-            <span>Task</span>
-          </button>
-        </div>
-
         {/* Model Picker */}
         <ModelPicker
           selectedModel={selectedModel}
@@ -85,11 +59,7 @@ export function Composer({
           value={draft}
           onChange={(e) => setDraft(e.target.value)}
           onKeyDown={handleKeyDown}
-          placeholder={
-            isTask
-              ? 'Describe a multi-step task to execute asynchronously...'
-              : 'Message Nvirya or ask a question...'
-          }
+          placeholder="Message Nvirya or ask a question..."
           rows={1}
           disabled={sending}
         />
@@ -98,7 +68,7 @@ export function Composer({
       {/* Bottom Bar */}
       <div className="composer-footer-bar">
         <div className="composer-hints">
-          <span>{isTask ? 'Executes in background' : 'Enter to send · Shift+Enter for new line'}</span>
+          <span>Enter to send · Shift+Enter for new line</span>
         </div>
 
         <div className="composer-actions">

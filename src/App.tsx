@@ -372,7 +372,7 @@ function App() {
       {/* Sidebar */}
       <aside className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
         <div className="brand-row">
-          <div className="brand-mark">N</div>
+          <img src="/logo.png" alt="Nvirya" className="brand-logo-img" />
           <span className="brand-name">Nvirya AI</span>
           <span className="brand-version">v1.2</span>
           <button
@@ -511,14 +511,6 @@ function App() {
           <div className="topbar-actions">
             <ThemeToggle theme={theme} onToggle={toggleTheme} compact />
             <button
-              className="search-button"
-              onClick={() => setNotice('Global search will index past conversations in the next release.')}
-            >
-              <Search size={15} />
-              <span>Search</span>
-              <kbd>⌘ K</kbd>
-            </button>
-            <button
               className="icon-button"
               onClick={() => navigate('settings')}
               aria-label="Settings"
@@ -549,8 +541,6 @@ function App() {
               selectedModel={selectedModel}
               models={models}
               setSelectedModel={setSelectedModel}
-              composerMode={composerMode}
-              setComposerMode={setComposerMode}
               onStop={() => abortRef.current?.abort()}
             />
           )}
@@ -606,8 +596,6 @@ function ChatPage(props: {
   selectedModel: string
   models: ModelCard[]
   setSelectedModel: (value: string) => void
-  composerMode: 'chat' | 'task'
-  setComposerMode: (value: 'chat' | 'task') => void
   onStop: () => void
 }) {
   const endRef = useRef<HTMLDivElement>(null)
@@ -616,15 +604,11 @@ function ChatPage(props: {
     endRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [props.messages])
 
-  const handleSuggestionClick = (promptText: string) => {
-    props.setDraft(promptText)
-  }
-
   return (
     <section className="chat-page">
       <div className="chat-column">
         {props.messages.length === 0 ? (
-          <EmptyChat onSelectSuggestion={handleSuggestionClick} />
+          <EmptyChat />
         ) : (
           <div className="messages-feed">
             {props.messages.map((message) => (
@@ -643,46 +627,23 @@ function ChatPage(props: {
           selectedModel={props.selectedModel}
           setSelectedModel={props.setSelectedModel}
           models={props.models}
-          composerMode={props.composerMode}
-          setComposerMode={props.setComposerMode}
         />
       </div>
     </section>
   )
 }
 
-function EmptyChat({ onSelectSuggestion }: { onSelectSuggestion: (text: string) => void }) {
-  const suggestions = [
-    { title: 'Summarize system architecture', prompt: 'Summarize the architecture of a high-concurrency microservice system with Redis and Kafka.' },
-    { title: 'Plan technical research task', prompt: 'Plan a structured technical research task comparing OAuth2 PKCE vs Session-cookie auth.' },
-    { title: 'Debug asynchronous error', prompt: 'Help me debug this TypeScript async generator error with SSE backpressure.' },
-    { title: 'Draft API specification', prompt: 'Draft a RESTful OpenAPI spec for an AI agent runner with streaming responses.' },
-  ]
-
+function EmptyChat() {
   return (
     <div className="empty-chat-container">
       <div className="empty-logo-glow">
-        <Sparkles size={26} />
+        <img src="/logo.png" alt="Nvirya AI" className="hero-logo-img" />
       </div>
       <h1>Work with intelligence.</h1>
       <p>
         Engage with state-of-the-art AI reasoning models, hand off multi-step tasks, or generate
         production-ready code.
       </p>
-
-      <div className="suggestions-grid">
-        {suggestions.map((item, idx) => (
-          <button
-            key={idx}
-            type="button"
-            className="suggestion-pill"
-            onClick={() => onSelectSuggestion(item.prompt)}
-          >
-            <Sparkles size={13} className="text-muted" />
-            <span>{item.title}</span>
-          </button>
-        ))}
-      </div>
     </div>
   )
 }
@@ -1072,7 +1033,7 @@ function Login({ error }: { error: string }) {
   return (
     <div className="login-screen">
       <div className="login-panel">
-        <div className="brand-mark large">N</div>
+        <img src="/logo.png" alt="Nvirya AI" className="login-logo-img" />
         <p className="eyebrow">Nvirya AI</p>
         <h1>Work with intelligence.</h1>
         <p className="login-detail">

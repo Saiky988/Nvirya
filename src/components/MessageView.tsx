@@ -216,7 +216,7 @@ export function MessageView({ message }: MessageViewProps) {
       <div className="message-container">
         {/* Avatar */}
         <div className={`message-avatar ${isUser ? 'user-avatar' : 'bot-avatar'}`}>
-          {isUser ? <UserIcon size={14} /> : <Bot size={15} />}
+          {isUser ? <UserIcon size={14} /> : <img src="/logo.png" alt="Nvirya" className="bot-avatar-img" />}
         </div>
 
         <div className="message-content-wrapper">
@@ -297,3 +297,4 @@ export function MessageView({ message }: MessageViewProps) {
     </article>
   )
 }
+
