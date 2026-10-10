@@ -25,6 +25,14 @@ export interface ChatMessage {
   streaming?: boolean
 }
 
+export interface ChatSession {
+  id: string
+  title: string
+  createdAt: string
+  updatedAt: string
+  messages: ChatMessage[]
+}
+
 export interface ChatCompletionResponse {
   id: string
   model: string
